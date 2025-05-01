@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las TICs - Presentación de Josue - 8vo Grado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">Las Tecnologías de la Información y Comunicación</h1>
+            <h2 class="subtitle">Por Josue - 8vo Grado</h2>
+        </header>
+
+        <div class="slides-container">
+            <div class="slide active" id="slide1">
+                <div class="slide-content">
+                    <div class="image-container">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" alt="TICs Logo">
+                    </div>
+                    <h2>Bienvenido a mi Presentación sobre las TICs</h2>
+                    <p>Explora las 5 preguntas haciendo clic en los botones de navegación.</p>
+                    <div class="start-button" onclick="nextSlide()">Comenzar</div>
+                </div>
+            </div>
+
+            <div class="slide" id="slide2">
+                <div class="slide-content">
+                    <div class="question-box">
+                        <div class="image-container">
+                            <img src="https://img.freepik.com/vector-gratis/concepto-tic-plano_23-2148174157.jpg" alt="¿Qué son las TICs?">
+                        </div>
+                        <h3>Pregunta 1</h3>
+                        <p>¿Qué significa las TICs?</p>
+                        <div class="answer-button" onclick="showAnswer('answer1')">Ver Respuesta</div>
+                        <p class="answer" id="answer1">Las TICs (Tecnologías de la Información y la Comunicación) son herramientas tecnológicas utilizadas para gestionar, almacenar, transmitir y compartir información. Incluyen dispositivos, aplicaciones y sistemas como internet, computadoras, teléfonos móviles, redes sociales, entre otros.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" id="slide3">
+                <div class="slide-content">
+                    <div class="question-box">
+                        <div class="image-container">
+                            <img src="https://img.freepik.com/vector-gratis/ilustracion-concepto-componentes_114360-5016.jpg" alt="Componentes de las TICs">
+                        </div>
+                        <h3>Pregunta 2</h3>
+                        <p>¿Cuáles son los principales componentes de las TICs?</p>
+                        <div class="answer-button" onclick="showAnswer('answer2')">Ver Respuesta</div>
+                        <div class="answer" id="answer2">
+                            <ul>
+                                <li><strong>Hardware:</strong> Dispositivos físicos (computadoras, tablets, routers).</li>
+                                <li><strong>Software:</strong> Programas y aplicaciones (sistemas operativos, apps de mensajería).</li>
+                                <li><strong>Redes de comunicación:</strong> Internet, redes móviles (4G/5G), fibra óptica.</li>
+                                <li><strong>Datos:</strong> Información digital procesada y compartida.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" id="slide4">
+                <div class="slide-content">
+                    <div class="question-box">
+                        <div class="image-container">
+                            <img src="https://img.freepik.com/vector-gratis/estudiantes-dispositivos-tecnologicos_23-2148888780.jpg" alt="TICs en educación">
+                        </div>
+                        <h3>Pregunta 3</h3>
+                        <p>Mencione al menos 3 ejemplos de herramientas TICs que se usan en la educación</p>
+                        <div class="answer-button" onclick="showAnswer('answer3')">Ver Respuesta</div>
+                        <div class="answer" id="answer3">
+                            <ul>
+                                <li><strong>Plataformas educativas:</strong> Moodle, Google Classroom.</li>
+                                <li><strong>Herramientas colaborativas:</strong> Zoom, Microsoft Teams.</li>
+                                <li><strong>Recursos digitales:</strong> Libros electrónicos (e-books), enciclopedias en línea (Wikipedia).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" id="slide5">
+                <div class="slide-content">
+                    <div class="question-box">
+                        <div class="image-container">
+                            <img src="https://img.freepik.com/vector-gratis/ilustracion-concepto-comunicacion_114360-1009.jpg" alt="Comunicación digital">
+                        </div>
+                        <h3>Pregunta 4</h3>
+                        <p>¿Cómo han cambiado las TICs en la forma que nos comunicamos?</p>
+                        <div class="answer-button" onclick="showAnswer('answer4')">Ver Respuesta</div>
+                        <div class="answer" id="answer4">
+                            <ul>
+                                <li><strong>Instantaneidad:</strong> Comunicación en tiempo real (mensajería, videollamadas).</li>
+                                <li><strong>Globalización:</strong> Interacción con personas en cualquier parte del mundo.</li>
+                                <li><strong>Multimedia:</strong> Uso de imágenes, videos y audios junto al texto.</li>
+                                <li><strong>Redes sociales:</strong> Plataformas como Facebook o Twitter han transformado las interacciones sociales.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" id="slide6">
+                <div class="slide-content">
+                    <div class="question-box">
+                        <div class="image-container">
+                            <img src="https://img.freepik.com/vector-gratis/concepto-pros-contras-ventajas-desventajas_23-2148773173.jpg" alt="Ventajas y desventajas">
+                        </div>
+                        <h3>Pregunta 5</h3>
+                        <p>¿Qué ventajas y desventajas tienen las TICs en nuestra vida diaria?</p>
+                        <div class="answer-button" onclick="showAnswer('answer5')">Ver Respuesta</div>
+                        <div class="answer" id="answer5">
+                            <div class="two-columns">
+                                <div class="column">
+                                    <h4>Ventajas</h4>
+                                    <ul>
+                                        <li>Acceso rápido a información.</li>
+                                        <li>Facilitan el trabajo remoto/educación.</li>
+                                        <li>Comunicación sin barreras geográficas.</li>
+                                        <li>Innovación en entretenimiento.</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <h4>Desventajas</h4>
+                                    <ul>
+                                        <li>Dependencia tecnológica.</li>
+                                        <li>Riesgos de seguridad (ciberdelitos).</li>
+                                        <li>Brecha digital (desigualdad en acceso).</li>
+                                        <li>Adicción o aislamiento social.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" id="slide7">
+                <div class="slide-content">
+                    <div class="image-container final-image">
+                        <img src="https://img.freepik.com/vector-gratis/ilustracion-concepto-gracias_114360-11839.jpg" alt="Gracias">
+                    </div>
+                    <h2>¡Gracias por ver mi presentación sobre las TICs!</h2>
+                    <p>Presentado por Josue - 8vo Grado</p>
+                    <div class="restart-button" onclick="restartPresentation()">Reiniciar</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <div class="prev-button" onclick="prevSlide()">Anterior</div>
+            <div class="next-button" onclick="nextSlide()">Siguiente</div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

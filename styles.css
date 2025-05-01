@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #11998e, #38ef7d);
+    color: white;
+}
+
+.title {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    animation: fadeInDown 1s ease;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease;
+}
+
+.slides-container {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 1;
+}
+
+.slide-content {
+    text-align: center;
+    max-width: 85%;
+    animation: zoomIn 0.8s ease;
+}
+
+.image-container {
+    margin: 0 auto 20px;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: floatUp 1s forwards;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.final-image {
+    width: 200px;
+    height: 200px;
+}
+
+.question-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    animation: floatUp 0.8s forwards;
+}
+
+.question-box h3 {
+    color: #2575fc;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.question-box p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.answer {
+    display: none;
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    color: #333;
+    text-align: left;
+    animation: fadeIn 0.5s ease;
+}
+
+.answer.show {
+    display: block;
+}
+
+.answer ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.answer li {
+    margin-bottom: 8px;
+}
+
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.column h4 {
+    color: #2575fc;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.start-button, .answer-button, .restart-button {
+    display: inline-block;
+    padding: 10px 25px;
+    background: linear-gradient(to right, #11998e, #38ef7d);
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 10px 0;
+}
+
+.start-button:hover, .answer-button:hover, .restart-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.prev-button, .next-button {
+    padding: 8px 20px;
+    background-color: #2575fc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: #1a5cb8;
+    transform: translateY(-2px);
+}
+
+.progress-bar {
+    height: 5px;
+    background-color: #e0e0e0;
+    width: 100%;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(to right, #11998e, #38ef7d);
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes floatUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Efectos adicionales para imágenes */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slide.active .image-container {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .slides-container {
+        height: 600px;
+    }
+    
+    .question-box {
+        padding: 15px;
+    }
+    
+    .question-box h3 {
+        font-size: 1.3rem;
+    }
+    
+    .question-box p {
+        font-size: 1rem;
+    }
+    
+    .two-columns {
+        flex-direction: column;
+    }
+    
+    .image-container {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .slides-container {
+        height: 650px;
+    }
+    
+    .navigation {
+        padding: 10px 15px;
+    }
+    
+    .image-container {
+        width: 120px;
+        height: 120px;
+    }
+}
