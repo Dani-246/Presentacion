@@ -348,3 +348,49 @@ header {
         height: 120px;
     }
 }
+/* Añadir estos estilos al archivo CSS existente */
+
+.school-info {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.school-info p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.school-info-slide {
+    background-color: rgba(37, 117, 252, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    border-left: 3px solid #2575fc;
+}
+
+.school-info-slide p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .school-info, .school-info-slide {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .school-info p, .school-info-slide p {
+        font-size: 0.8rem;
+    }
+}
